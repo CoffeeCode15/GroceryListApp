@@ -8,7 +8,7 @@ import java.util.Scanner;
  * Contenuto: Programma Gestione lista spesa.
  * @author  Giacalone Riccardo, Emanuele Conte, Devy Cantalupo, Cristiano Valentini.
  */
-public class Market {
+public class Main {
     public static void main(String[] args) {
         List<String> list = new ArrayList<>(); // Lista dei prodotti del supermercato
         ListManager  productList = new ListManager(list);
