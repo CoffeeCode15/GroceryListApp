@@ -10,8 +10,7 @@ import java.util.Scanner;
  */
 public class Main {
     public static void main(String[] args) {
-        List<String> list = new ArrayList<>(); // Lista dei prodotti del supermercato
-        ListManager  productList = new ListManager(list);
+        ListManager  productList = new ListManager(); // Lista dei prodotti del supermercato
 
         Scanner scanner = new Scanner(System.in);
         boolean exit = false;
