@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 /**
  * Contenuto: Programma Gestione lista spesa.
- * @author  Giacalone Riccardo, Emanuele Conte, Devy Cantalupo, Cristiano Valentini.
+ * @author  Giacalone Riccardo, Emanuele Conte, Devy Cantalupo.
  */
 public class Main {
     public static void main(String[] args) {
