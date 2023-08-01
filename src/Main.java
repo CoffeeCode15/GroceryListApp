@@ -6,11 +6,12 @@ import java.util.Scanner;
 
 /**
  * Contenuto: Programma Gestione lista spesa.
- * @author  Giacalone Riccardo, Emanuele Conte, Devy Cantalupo.
+ *
+ * @author Giacalone Riccardo, Emanuele Conte, Devy Cantalupo.
  */
 public class Main {
     public static void main(String[] args) {
-        ListManager  productList = new ListManager(); // Lista dei prodotti del supermercato
+        ListManager productList = new ListManager(); // Lista dei prodotti del supermercato
 
         Scanner scanner = new Scanner(System.in);
         boolean exit = false;
@@ -29,7 +30,7 @@ public class Main {
             switch (choice) {
                 case 1 -> {
                     System.out.println("Inserisci il nome del prodotto da aggiungere:");
-                    String newProduct = scanner.nextLine(); // Legge il nome del prodotto da aggiungere
+                    Product newProduct = new Product(scanner.nextLine()); // Legge il nome del prodotto da aggiungere
                     productList.addProduct(newProduct);
                 }
                 case 2 -> {
