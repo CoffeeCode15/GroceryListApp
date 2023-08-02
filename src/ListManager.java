@@ -1,26 +1,31 @@
 package GroceryListApp.src;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class ListManager {
-    private List <String> productList;
+    private List<Product> productList;
 
-    public ListManager(List<String> productList) {
-        this.productList = productList;
+    public ListManager() {
+        this.productList = new ArrayList<>();
     }
 
-    public void addProduct(String product) {
-        productList.add(product); // Aggiunge il prodotto alla lista
-        System.out.println(product + " è stato aggiunto alla lista.");
+    public void addProduct(Product newProduct) {
+        productList.add(newProduct); // Aggiunge il prodotto alla lista
+        System.out.println("Prodotto aggiunto alla lista.");
     }
 
-    public void removeProduct(String product) {
-        if (productList.remove(product)) {
-            // Rimuove il prodotto dalla lista e notifica l'utente
-            System.out.println(product + " è stato rimosso dalla lista.");
-        } else {
-            // Se il prodotto non è presente, notifica l'utente
-            System.out.println(product + " non è presente nella lista.");
+    public void removeProduct(String productToDelete) {
+        for (Product product : productList) {
+            if (Objects.equals(product.getName(), productToDelete)) {
+                // Rimuove il prodotto dalla lista e notifica l'utente
+                productList.remove(product);
+                System.out.println("Prodotto rimosso dalla lista.");
+            } else {
+                // Se il prodotto non è presente, notifica l'utente
+                System.out.println("Prodotto non presente nella lista.");
+            }
         }
     }
 
@@ -31,8 +36,10 @@ public class ListManager {
         } else {
             // Altrimenti, visualizza i prodotti presenti nella lista
             System.out.println("Lista prodotti:");
-            for (String product : productList) {
-                System.out.println("- " + product);
+            int i = 1;
+            for (Product product : productList) {
+                System.out.println(i + "- " + product.getName());
+                i++;
             }
         }
     }
