@@ -38,7 +38,7 @@ public class ListManager {
             System.out.println("Lista prodotti:");
             int i = 1;
             for (Product product : productList) {
-                System.out.println(i + "- " + product.getName());
+                System.out.println(i + "- " + product.getName() + " x" + product.getQuantity() + " (€" + product.getPrice() + ")");
                 i++;
             }
         }
