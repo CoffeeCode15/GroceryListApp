@@ -52,7 +52,7 @@ public class ListManager {
             System.out.println("Lista prodotti:");
             int i = 1;
             for (Product product : productList) {
-                System.out.println(i + "- " + product.getName() + " x" + product.getQuantity() + " (€" + product.getPrice() + ")");
+                System.out.println(i + "- " + product.getName() + " x" + product.getQuantity() + " (" + currencySymbol + product.getPrice() + ")");
                 i++;
             }
         }
