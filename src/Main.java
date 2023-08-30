@@ -26,9 +26,6 @@ public class Main {
             System.out.println("5. Imposta valuta principale.");
             System.out.println("6. Salva su file.");
             System.out.println("7. Esci.");
-
-            double totalExpanse = productList.totalCalculationExpanse();
-            System.out.println("Totale spesa stimato: €" + totalExpanse);
             
             int choice = scanner.nextInt(); // Legge l'input dell'utente come intero
             scanner.nextLine(); // Consuma il carattere newline dopo la lettura dell'intero
@@ -44,8 +41,8 @@ public class Main {
                             System.out.println("Inserisci una quantità pari almeno a 1");
                         }
                     } while (newProduct.getQuantity() <= 0);
-                    do{
-                        System.out.println("Prezzo stimato in Euro:");
+                    do {
+                        System.out.println("Prezzo stimato in " + productList.getCurrencySymbol() + ":");
                         newProduct.setPrice(scanner.nextFloat()); //Legge il prezzo stimato del prodotto
                         if (newProduct.getPrice() <= 0) {
                             System.out.println("Inserisci un prezzo maggiore di 0");
@@ -58,7 +55,11 @@ public class Main {
                     String productToRemove = scanner.nextLine(); // Legge il nome del prodotto da rimuovere
                     productList.removeProduct(productToRemove);
                 }
-                case 3 -> productList.displayProductList();
+                case 3 -> {
+                    productList.displayProductList();
+                    double totalExpanse = productList.totalCalculationExpanse();
+                    System.out.println("Totale spesa stimato: " + productList.getCurrencySymbol() + totalExpanse);
+                }
                 case 4 -> {
                     System.out.println("Inserisci il nome del prodotto da segnare come completato:");
                     String productToComplete = scanner.nextLine();
@@ -71,7 +72,7 @@ public class Main {
                     System.out.println("Simbolo della valuta impostato su " + newCurrencySymbol);
                     break;
                 }
-                case 6-> {
+                case 6 -> {
                     System.out.println("Inserisci il nome del file in cui salvare la lista:");
                     String fileName = scanner.nextLine();
                     productList.saveToFile(fileName);

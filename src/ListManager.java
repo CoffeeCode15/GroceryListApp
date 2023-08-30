@@ -11,23 +11,25 @@ import java.io.PrintWriter;
 public class ListManager {
     private List<Product> productList;
     private String currencySymbol;
-
+    
     public ListManager() {
-
         this.productList = new ArrayList<>();
         this.currencySymbol = "€";
-
-
     }
-
+    
     public void addProduct(Product newProduct) {
         productList.add(newProduct); // Aggiunge il prodotto alla lista
         System.out.println("Prodotto aggiunto alla lista.");
     }
+    
     public void setCurrencySymbol(String symbol) {
         currencySymbol = symbol;
     }
-
+    
+    public String getCurrencySymbol() {
+        return currencySymbol;
+    }
+    
     public void removeProduct(String productToDelete) {
         for (Product product : productList) {
             if (Objects.equals(product.getName(), productToDelete)) {
@@ -40,7 +42,7 @@ public class ListManager {
             }
         }
     }
-
+    
     public void displayProductList() {
         if (productList.isEmpty()) {
             // Se la lista è vuota, notifica l'utente
@@ -55,6 +57,7 @@ public class ListManager {
             }
         }
     }
+    
     public double totalCalculationExpanse() {
         double totalExpanse = 0;
         for (Product product : productList) {
@@ -62,6 +65,7 @@ public class ListManager {
         }
         return totalExpanse;
     }
+    
     public void markProductAsCompleted(String productToComplete) {
         for (Product product : productList) {
             if (Objects.equals(product.getName(), productToComplete)) {
@@ -72,6 +76,7 @@ public class ListManager {
         }
         System.out.println("Prodotto non trovato nella lista.");
     }
+    
     public void saveToFile(String fileName) {
         try (PrintWriter writer = new PrintWriter(new FileWriter(fileName))) {
             for (Product product : productList) {
@@ -82,6 +87,4 @@ public class ListManager {
             System.out.println("Errore durante il salvataggio del file: " + e.getMessage());
         }
     }
-
-
 }
