@@ -79,8 +79,9 @@ public class ListManager {
     
     public void saveToFile(String fileName) {
         try (PrintWriter writer = new PrintWriter(new FileWriter(fileName))) {
+            int iterator = 1;
             for (Product product : productList) {
-                writer.println(product.getName() + "," + product.getQuantity() + "," + product.getPrice());
+                writer.println(iterator + "- " + product.getName() + ", x" + product.getQuantity() + ", " + product.getPrice() + currencySymbol);
             }
             System.out.println("Lista salvata nel file: " + fileName);
         } catch (IOException e) {
