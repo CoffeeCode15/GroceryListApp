@@ -1,11 +1,12 @@
 package GroceryListApp.src;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
+
+import static GroceryListApp.src.ListManager.SortMethods.ALPHABETICAL;
+import static GroceryListApp.src.ListManager.SortMethods.PRICE;
 
 
 public class ListManager {
@@ -43,12 +44,25 @@ public class ListManager {
         }
     }
     
-    public void displayProductList() {
+    public enum SortMethods {
+        ALPHABETICAL,
+        PRICE
+        // Aggiungi altri criteri se necessario
+    }
+    
+    
+    public void displayProductList(SortMethods sortCriteria) {
+        // Ordina la lista in base al criterio specificato
+        if (sortCriteria.equals(ALPHABETICAL)) {
+            productList.sort(Comparator.comparing(Product::getName));
+        } else if (sortCriteria.equals(PRICE)) {
+            productList.sort(Comparator.comparing(Product::getPrice));
+            // Aggiungi altri criteri di ordinamento se necessario
+        }
+        
         if (productList.isEmpty()) {
-            // Se la lista è vuota, notifica l'utente
             System.out.println("La lista è vuota.");
         } else {
-            // Altrimenti, visualizza i prodotti presenti nella lista
             System.out.println("Lista prodotti:");
             int i = 1;
             for (Product product : productList) {
@@ -61,6 +75,7 @@ public class ListManager {
             }
         }
     }
+    
     
     public float totalCalculationExpanse() {
         float totalExpanse = 0;

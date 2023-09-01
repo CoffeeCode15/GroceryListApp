@@ -31,30 +31,40 @@ public class Main {
             switch (choice) {
                 case 1 -> {
                     System.out.println("Inserisci il nome del prodotto da aggiungere:");
-                    String name = ProductUtil.readLine(scanner);
+                    String name = ScannerUtil.readLine(scanner);
                     Product newProduct = new Product(name); // Legge il nome del prodotto da aggiungere
                     
-                    int quantity = ProductUtil.readQuantity(scanner);
+                    int quantity = ScannerUtil.readQuantity(scanner);
                     newProduct.setQuantity(quantity);
                     
-                    float price = ProductUtil.readPrice(scanner);
+                    float price = ScannerUtil.readPrice(scanner);
                     newProduct.setPrice(price);
                     
                     productList.addProduct(newProduct);
                 }
                 case 2 -> {
                     System.out.println("Inserisci il nome del prodotto da rimuovere:");
-                    String productToRemove = ProductUtil.readLine(scanner);
+                    String productToRemove = ScannerUtil.readLine(scanner);
                     productList.removeProduct(productToRemove);
                 }
                 case 3 -> {
-                    productList.displayProductList();
+                    ListManager.SortMethods sortCriteria = null;
+                    
+                    int sortChoice = ScannerUtil.readSortMethod(scanner);
+                    
+                    switch (sortChoice) {
+                        case 1 -> sortCriteria = ListManager.SortMethods.ALPHABETICAL;
+                        case 2 -> sortCriteria = ListManager.SortMethods.PRICE;
+                    }
+                    
+                    productList.displayProductList(sortCriteria);
+                    
                     float totalExpanse = productList.totalCalculationExpanse();
                     System.out.println("Totale spesa stimato: " + productList.getCurrencySymbol() + totalExpanse);
                 }
                 case 4 -> {
                     System.out.println("Inserisci il nome del prodotto da segnare come completato:");
-                    String productToComplete = ProductUtil.readLine(scanner);
+                    String productToComplete = ScannerUtil.readLine(scanner);
                     productList.markProductAsCompleted(productToComplete);
                 }
                 case 5 -> {
