@@ -1,7 +1,5 @@
 package GroceryListApp.src;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 /**
@@ -26,9 +24,6 @@ public class Main {
             System.out.println("5. Imposta valuta principale.");
             System.out.println("6. Salva su file.");
             System.out.println("7. Esci.");
-
-            double totalExpanse = productList.totalCalculationExpanse();
-            System.out.println("Totale spesa stimato: €" + totalExpanse);
             
             int choice = scanner.nextInt(); // Legge l'input dell'utente come intero
             scanner.nextLine(); // Consuma il carattere newline dopo la lettura dell'intero
@@ -36,32 +31,30 @@ public class Main {
             switch (choice) {
                 case 1 -> {
                     System.out.println("Inserisci il nome del prodotto da aggiungere:");
-                    Product newProduct = new Product(scanner.nextLine()); // Legge il nome del prodotto da aggiungere
-                    do {
-                        System.out.println("Quantità da acquistare:");
-                        newProduct.setQuantity(scanner.nextInt()); //Legge la quantità di prodotto da acquistare
-                        if (newProduct.getQuantity() <= 0) {
-                            System.out.println("Inserisci una quantità pari almeno a 1");
-                        }
-                    } while (newProduct.getQuantity() <= 0);
-                    do{
-                        System.out.println("Prezzo stimato in Euro:");
-                        newProduct.setPrice(scanner.nextFloat()); //Legge il prezzo stimato del prodotto
-                        if (newProduct.getPrice() <= 0) {
-                            System.out.println("Inserisci un prezzo maggiore di 0");
-                        }
-                    } while (newProduct.getPrice() <= 0);
+                    String name = ProductUtil.readLine(scanner);
+                    Product newProduct = new Product(name); // Legge il nome del prodotto da aggiungere
+                    
+                    int quantity = ProductUtil.readQuantity(scanner);
+                    newProduct.setQuantity(quantity);
+                    
+                    float price = ProductUtil.readPrice(scanner);
+                    newProduct.setPrice(price);
+                    
                     productList.addProduct(newProduct);
                 }
                 case 2 -> {
                     System.out.println("Inserisci il nome del prodotto da rimuovere:");
-                    String productToRemove = scanner.nextLine(); // Legge il nome del prodotto da rimuovere
+                    String productToRemove = ProductUtil.readLine(scanner);
                     productList.removeProduct(productToRemove);
                 }
-                case 3 -> productList.displayProductList();
+                case 3 -> {
+                    productList.displayProductList();
+                    float totalExpanse = productList.totalCalculationExpanse();
+                    System.out.println("Totale spesa stimato: " + productList.getCurrencySymbol() + totalExpanse);
+                }
                 case 4 -> {
                     System.out.println("Inserisci il nome del prodotto da segnare come completato:");
-                    String productToComplete = scanner.nextLine();
+                    String productToComplete = ProductUtil.readLine(scanner);
                     productList.markProductAsCompleted(productToComplete);
                 }
                 case 5 -> {
@@ -69,13 +62,11 @@ public class Main {
                     String newCurrencySymbol = scanner.nextLine();
                     productList.setCurrencySymbol(newCurrencySymbol);
                     System.out.println("Simbolo della valuta impostato su " + newCurrencySymbol);
-                    break;
                 }
-                case 6-> {
+                case 6 -> {
                     System.out.println("Inserisci il nome del file in cui salvare la lista:");
                     String fileName = scanner.nextLine();
                     productList.saveToFile(fileName);
-                    break;
                 }
                 case 7 -> {
                     exit = true;
