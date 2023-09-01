@@ -49,7 +49,7 @@ public class Main {
                 }
                 case 3 -> {
                     productList.displayProductList();
-                    double totalExpanse = productList.totalCalculationExpanse();
+                    float totalExpanse = productList.totalCalculationExpanse();
                     System.out.println("Totale spesa stimato: " + productList.getCurrencySymbol() + totalExpanse);
                 }
                 case 4 -> {

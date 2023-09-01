@@ -13,6 +13,7 @@ public class Product {
     
     public Product(String name) {
         this.name = name;
+        this.completed = false;
     }
     
     public void setQuantity(int quantity) {
@@ -23,8 +24,8 @@ public class Product {
         this.price = price;
     }
     
-    public void setCompleted(boolean completed) {
-        this.completed = completed;
+    public void setCompleted() {
+        completed = true;
     }
     
     public String getName() {

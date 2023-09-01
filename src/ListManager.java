@@ -52,14 +52,18 @@ public class ListManager {
             System.out.println("Lista prodotti:");
             int i = 1;
             for (Product product : productList) {
-                System.out.println(i + "- " + product.getName() + " x" + product.getQuantity() + " (" + currencySymbol + product.getPrice() + ")");
+                String isCompleted = (product.isCompleted()) ? "✅" : "";
+                System.out.println(i + "- " + product.getName() + " x" + product.getQuantity() + " (" +
+                        currencySymbol +
+                        product.getPrice() +
+                        ")" + isCompleted);
                 i++;
             }
         }
     }
     
-    public double totalCalculationExpanse() {
-        double totalExpanse = 0;
+    public float totalCalculationExpanse() {
+        float totalExpanse = 0;
         for (Product product : productList) {
             totalExpanse += product.getQuantity() * product.getPrice();
         }
@@ -69,7 +73,7 @@ public class ListManager {
     public void markProductAsCompleted(String productToComplete) {
         for (Product product : productList) {
             if (Objects.equals(product.getName(), productToComplete)) {
-                product.setCompleted(true); // Aggiungi un nuovo attributo booleano "completed" alla classe Product
+                product.setCompleted(); // Setta il prodotto come completo
                 System.out.println("Prodotto segnato come completato.");
                 return;
             }
