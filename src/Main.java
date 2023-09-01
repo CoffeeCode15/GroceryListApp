@@ -1,7 +1,5 @@
 package GroceryListApp.src;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 /**
@@ -33,7 +31,8 @@ public class Main {
             switch (choice) {
                 case 1 -> {
                     System.out.println("Inserisci il nome del prodotto da aggiungere:");
-                    Product newProduct = new Product(scanner.nextLine()); // Legge il nome del prodotto da aggiungere
+                    String name = ProductUtil.readLine(scanner);
+                    Product newProduct = new Product(name); // Legge il nome del prodotto da aggiungere
                     
                     int quantity = ProductUtil.readQuantity(scanner);
                     newProduct.setQuantity(quantity);
@@ -45,7 +44,7 @@ public class Main {
                 }
                 case 2 -> {
                     System.out.println("Inserisci il nome del prodotto da rimuovere:");
-                    String productToRemove = scanner.nextLine(); // Legge il nome del prodotto da rimuovere
+                    String productToRemove = ProductUtil.readLine(scanner);
                     productList.removeProduct(productToRemove);
                 }
                 case 3 -> {
@@ -55,7 +54,7 @@ public class Main {
                 }
                 case 4 -> {
                     System.out.println("Inserisci il nome del prodotto da segnare come completato:");
-                    String productToComplete = scanner.nextLine();
+                    String productToComplete = ProductUtil.readLine(scanner);
                     productList.markProductAsCompleted(productToComplete);
                 }
                 case 5 -> {
@@ -63,13 +62,11 @@ public class Main {
                     String newCurrencySymbol = scanner.nextLine();
                     productList.setCurrencySymbol(newCurrencySymbol);
                     System.out.println("Simbolo della valuta impostato su " + newCurrencySymbol);
-                    break;
                 }
                 case 6 -> {
                     System.out.println("Inserisci il nome del file in cui salvare la lista:");
                     String fileName = scanner.nextLine();
                     productList.saveToFile(fileName);
-                    break;
                 }
                 case 7 -> {
                     exit = true;
