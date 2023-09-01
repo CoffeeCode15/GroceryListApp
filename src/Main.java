@@ -34,20 +34,13 @@ public class Main {
                 case 1 -> {
                     System.out.println("Inserisci il nome del prodotto da aggiungere:");
                     Product newProduct = new Product(scanner.nextLine()); // Legge il nome del prodotto da aggiungere
-                    do {
-                        System.out.println("Quantità da acquistare:");
-                        newProduct.setQuantity(scanner.nextInt()); //Legge la quantità di prodotto da acquistare
-                        if (newProduct.getQuantity() <= 0) {
-                            System.out.println("Inserisci una quantità pari almeno a 1");
-                        }
-                    } while (newProduct.getQuantity() <= 0);
-                    do {
-                        System.out.println("Prezzo stimato in " + productList.getCurrencySymbol() + ":");
-                        newProduct.setPrice(scanner.nextFloat()); //Legge il prezzo stimato del prodotto
-                        if (newProduct.getPrice() <= 0) {
-                            System.out.println("Inserisci un prezzo maggiore di 0");
-                        }
-                    } while (newProduct.getPrice() <= 0);
+                    
+                    int quantity = ProductUtil.readQuantity(scanner);
+                    newProduct.setQuantity(quantity);
+                    
+                    float price = ProductUtil.readPrice(scanner);
+                    newProduct.setPrice(price);
+                    
                     productList.addProduct(newProduct);
                 }
                 case 2 -> {
