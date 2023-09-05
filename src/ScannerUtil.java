@@ -2,7 +2,7 @@ package GroceryListApp.src;
 
 import java.util.Scanner;
 
-public class ProductUtil {
+public class ScannerUtil {
     public static String readLine(Scanner scanner) {
         String name;
         do {
@@ -45,5 +45,24 @@ public class ProductUtil {
             }
         } while (price <= 0);
         return price;
+    }
+    
+    public static int readSortMethod(Scanner scanner) {
+        int sort;
+        System.out.println("Seleziona il criterio di ordinamento:");
+        System.out.println("1. Ordine Alfabetico");
+        System.out.println("2. Ordine di Prezzo");
+        do {
+            while (!scanner.hasNextInt()) {
+                System.out.println("Inserisci un numero valido.");
+                scanner.next(); // Consuma l'input type errato per evitare il crush del programma
+            }
+            sort = scanner.nextInt(); //Legge il metodo di sorting (1 o 2)
+            if (sort < 1 || sort > 2) {
+                System.out.println("Inserisci un numero valido.");
+            }
+        } while (sort < 1 || sort > 2);
+        
+        return sort;
     }
 }
