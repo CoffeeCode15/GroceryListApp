@@ -9,6 +9,13 @@ public class Product {
     private float price;
     private boolean completed;
 
+
+    Product(String name,int quantity,float price, boolean completed){
+        this.name = name;
+        this.price = price;
+        this.quantity = quantity;
+            }
+
     public Product(String name) {
         this.name = name;
     }
@@ -36,4 +43,11 @@ public class Product {
     }
 
     public boolean isCompleted(){return completed;}
-}
+        }
+
+
+
+
+
+
+
