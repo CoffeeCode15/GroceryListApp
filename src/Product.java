@@ -1,10 +1,5 @@
 package GroceryListApp.src;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Objects;
-
 public class Product {
     private String name;
     private int quantity;
