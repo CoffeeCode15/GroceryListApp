@@ -10,7 +10,7 @@ public class Product {
     private int quantity;
     private float price;
     private boolean completed;
-    
+
     public Product(String name) {
         this.name = name;
         this.completed = false;
@@ -39,8 +39,13 @@ public class Product {
     public float getPrice() {
         return price;
     }
+
+    public boolean isCompleted(){return completed;}
+        }
+
     
     public boolean isCompleted() {
         return completed;
     }
 }
+
