@@ -1,0 +1,4 @@
+Prova
+prova proggetto
+team
+prova per impementare la funzione di lettura file
