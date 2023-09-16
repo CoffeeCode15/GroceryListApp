@@ -14,6 +14,8 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         boolean exit = false;
         
+        productList.importFromFile("List.txt");
+        
         while (!exit) {
             // Mostra le opzioni del menu
             System.out.println("Seleziona un'opzione:");
@@ -74,9 +76,9 @@ public class Main {
                     System.out.println("Simbolo della valuta impostato su " + newCurrencySymbol);
                 }
                 case 6 -> {
-                    System.out.println("Inserisci il nome del file in cui salvare la lista:");
-                    String fileName = scanner.nextLine();
+                    String fileName = "List.txt";
                     productList.saveToFile(fileName);
+                    System.out.println("Lista salvata nel file " + fileName);
                 }
                 case 7 -> {
                     exit = true;

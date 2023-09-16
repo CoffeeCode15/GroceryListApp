@@ -1,17 +1,20 @@
 package GroceryListApp.src;
 
-import java.util.*;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.*;
+import java.util.stream.Stream;
 
 import static GroceryListApp.src.ListManager.SortMethods.ALPHABETICAL;
 import static GroceryListApp.src.ListManager.SortMethods.PRICE;
 
 
 public class ListManager {
-    private List<Product> productList;
-    private String currencySymbol;
+    protected List<Product> productList;
+    protected String currencySymbol;
     
     public ListManager() {
         this.productList = new ArrayList<>();
@@ -76,7 +79,6 @@ public class ListManager {
         }
     }
     
-    
     public float totalCalculationExpanse() {
         float totalExpanse = 0;
         for (Product product : productList) {
@@ -96,15 +98,34 @@ public class ListManager {
         System.out.println("Prodotto non trovato nella lista.");
     }
     
+    // Questo metodo dovrebbe salvare la lista in un file
     public void saveToFile(String fileName) {
         try (PrintWriter writer = new PrintWriter(new FileWriter(fileName))) {
-            int iterator = 1;
             for (Product product : productList) {
-                writer.println(iterator + "- " + product.getName() + ", x" + product.getQuantity() + ", " + product.getPrice() + currencySymbol);
+                writer.println(product.getName() + ", x" + product.getQuantity() + ", " + product.getPrice() + currencySymbol);
             }
             System.out.println("Lista salvata nel file: " + fileName);
         } catch (IOException e) {
             System.out.println("Errore durante il salvataggio del file: " + e.getMessage());
         }
     }
+    
+    // Questo metodo dovrebbe importare la lista da un file
+    public void importFromFile(String fileName) {
+        try (Stream<String> reader = Files.lines(Paths.get(fileName))) {
+            reader.forEach(line -> {
+                // Analizza ogni riga e aggiungi un nuovo prodotto alla lista productList
+                String[] parts = line.split(",");
+                String name = parts[0];
+                String[] quantitySplit = parts[1].split("x");
+                int quantity = Integer.parseInt(quantitySplit[1]);
+                float price = Float.parseFloat(parts[2].substring(1, parts[2].length() - 1));
+                productList.add(new Product(name, quantity, price));
+            });
+            System.out.println("Lista importata dal file: " + fileName);
+        } catch (IOException e) {
+            System.out.println("Errore durante l'importazione del file: " + e.getMessage());
+        }
+    }
+    
 }
