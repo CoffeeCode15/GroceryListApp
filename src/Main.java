@@ -1,5 +1,9 @@
 package GroceryListApp.src;
 
+import java.io.File;
+import java.nio.file.FileSystems;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.util.Scanner;
 
 /**
@@ -13,8 +17,11 @@ public class Main {
         
         Scanner scanner = new Scanner(System.in);
         boolean exit = false;
+        File file = new File("C:\\coding\\DevelhopeProject\\List.txt");
         
-        productList.importFromFile("List.txt");
+        if (Files.exists(file.toPath())) {
+            productList.importFromFile("List.txt");
+        }
         
         while (!exit) {
             // Mostra le opzioni del menu
