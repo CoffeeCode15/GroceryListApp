@@ -17,7 +17,7 @@ public class Main {
         
         Scanner scanner = new Scanner(System.in);
         boolean exit = false;
-        File file = new File("C:\\coding\\DevelhopeProject\\List.txt");
+        File file = new File("List.txt");
         
         if (Files.exists(file.toPath())) {
             productList.importFromFile("List.txt");
