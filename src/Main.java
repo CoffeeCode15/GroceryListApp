@@ -1,5 +1,9 @@
 package GroceryListApp.src;
 
+import java.io.File;
+import java.nio.file.FileSystems;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.util.Scanner;
 
 /**
@@ -13,6 +17,11 @@ public class Main {
         
         Scanner scanner = new Scanner(System.in);
         boolean exit = false;
+        File file = new File("List.txt");
+        
+        if (Files.exists(file.toPath())) {
+            productList.importFromFile("List.txt");
+        }
         
         while (!exit) {
             // Mostra le opzioni del menu
@@ -74,9 +83,9 @@ public class Main {
                     System.out.println("Simbolo della valuta impostato su " + newCurrencySymbol);
                 }
                 case 6 -> {
-                    System.out.println("Inserisci il nome del file in cui salvare la lista:");
-                    String fileName = scanner.nextLine();
+                    String fileName = "List.txt";
                     productList.saveToFile(fileName);
+                    System.out.println("Lista salvata nel file " + fileName);
                 }
                 case 7 -> {
                     exit = true;

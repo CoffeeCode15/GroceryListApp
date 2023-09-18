@@ -10,7 +10,14 @@ public class Product {
         this.name = name;
         this.completed = false;
     }
-
+    
+    public Product(String name, int quantity, float price) {
+        this.name = name;
+        this.quantity = quantity;
+        this.price = price;
+        this.completed = false;
+    }
+    
     public void setQuantity(int quantity) {
         this.quantity = quantity;
     }
