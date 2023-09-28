@@ -1,9 +1,7 @@
 package GroceryListApp.src;
 
 import java.io.File;
-import java.nio.file.FileSystems;
 import java.nio.file.Files;
-import java.nio.file.Path;
 import java.util.Scanner;
 
 /**
@@ -14,15 +12,15 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         ListManager productList = new ListManager(); // Lista dei prodotti del supermercato
-        
+
         Scanner scanner = new Scanner(System.in);
         boolean exit = false;
         File file = new File("List.txt");
-        
+
         if (Files.exists(file.toPath())) {
             productList.importFromFile("List.txt");
         }
-        
+
         while (!exit) {
             // Mostra le opzioni del menu
             System.out.println("Seleziona un'opzione:");
@@ -33,22 +31,22 @@ public class Main {
             System.out.println("5. Imposta valuta principale.");
             System.out.println("6. Salva su file.");
             System.out.println("7. Esci.");
-            
+
             int choice = scanner.nextInt(); // Legge l'input dell'utente come intero
             scanner.nextLine(); // Consuma il carattere newline dopo la lettura dell'intero
-            
+
             switch (choice) {
                 case 1 -> {
                     System.out.println("Inserisci il nome del prodotto da aggiungere:");
                     String name = ScannerUtil.readLine(scanner);
                     Product newProduct = new Product(name); // Legge il nome del prodotto da aggiungere
-                    
+
                     int quantity = ScannerUtil.readQuantity(scanner);
                     newProduct.setQuantity(quantity);
-                    
+
                     float price = ScannerUtil.readPrice(scanner);
                     newProduct.setPrice(price);
-                    
+
                     productList.addProduct(newProduct);
                 }
                 case 2 -> {
@@ -58,16 +56,16 @@ public class Main {
                 }
                 case 3 -> {
                     ListManager.SortMethods sortCriteria = null;
-                    
+
                     int sortChoice = ScannerUtil.readSortMethod(scanner);
-                    
+
                     switch (sortChoice) {
                         case 1 -> sortCriteria = ListManager.SortMethods.ALPHABETICAL;
                         case 2 -> sortCriteria = ListManager.SortMethods.PRICE;
                     }
-                    
+
                     productList.displayProductList(sortCriteria);
-                    
+
                     float totalExpanse = productList.totalCalculationExpanse();
                     System.out.println("Totale spesa stimato: " + productList.getCurrencySymbol() + totalExpanse);
                 }
@@ -94,16 +92,7 @@ public class Main {
                 default -> System.out.println("Opzione non valida. Riprova.");
             }
         }
-        
+
         scanner.close();
     }
 }
-
-
-
-
-
-
-
-
-
