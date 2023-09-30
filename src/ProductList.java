@@ -8,22 +8,22 @@ import java.nio.file.Paths;
 import java.util.*;
 import java.util.stream.Stream;
 
-import static GroceryListApp.src.ListManager.SortMethods.ALPHABETICAL;
-import static GroceryListApp.src.ListManager.SortMethods.PRICE;
+import static GroceryListApp.src.ProductList.SortMethods.ALPHABETICAL;
+import static GroceryListApp.src.ProductList.SortMethods.PRICE;
 
 
-public class ListManager {
+public class ProductList {
     protected List<Product> productList;
     protected String currencySymbol;
     
-    public ListManager() {
+    public ProductList() {
         this.productList = new ArrayList<>();
         this.currencySymbol = "€";
     }
     
-    public void addProduct(Product newProduct) {
-        productList.add(newProduct); // Aggiunge il prodotto alla lista
+    public boolean addProduct(Product newProduct) {
         System.out.println("Prodotto aggiunto alla lista.");
+        return productList.add(newProduct); // Aggiunge il prodotto alla lista
     }
     
     public void setCurrencySymbol(String symbol) {
@@ -34,17 +34,18 @@ public class ListManager {
         return currencySymbol;
     }
     
-    public void removeProduct(String productToDelete) {
+    public boolean removeProduct(String productToDelete) {
         for (Product product : productList) {
             if (Objects.equals(product.getName(), productToDelete)) {
                 // Rimuove il prodotto dalla lista e notifica l'utente
-                productList.remove(product);
                 System.out.println("Prodotto rimosso dalla lista.");
+                return productList.remove(product);
             } else {
                 // Se il prodotto non è presente, notifica l'utente
                 System.out.println("Prodotto non presente nella lista.");
             }
         }
+        return false;
     }
     
     public enum SortMethods {
@@ -128,4 +129,14 @@ public class ListManager {
         }
     }
     
+    public void findProduct (String productName) {
+        for (Product product : productList) {
+            if (Objects.equals(product.getName(), productName)) {
+                System.out.println(product.getName() + ", " + product.getQuantity() + ", " + product.getPrice());
+                return;
+            } else {
+                System.out.println("Prodotto non trovato.");
+            }
+        }
+    }
 }

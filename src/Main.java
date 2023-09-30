@@ -11,7 +11,7 @@ import java.util.Scanner;
  */
 public class Main {
     public static void main(String[] args) {
-        ListManager productList = new ListManager(); // Lista dei prodotti del supermercato
+        ProductList productList = new ProductList(); // Lista dei prodotti del supermercato
 
         Scanner scanner = new Scanner(System.in);
         boolean exit = false;
@@ -30,7 +30,8 @@ public class Main {
             System.out.println("4. Segna prodotto come completato.");
             System.out.println("5. Imposta valuta principale.");
             System.out.println("6. Salva su file.");
-            System.out.println("7. Esci.");
+            System.out.println("7. Cerca un prodotto in lista.");
+            System.out.println("8. Esci.");
 
             int choice = scanner.nextInt(); // Legge l'input dell'utente come intero
             scanner.nextLine(); // Consuma il carattere newline dopo la lettura dell'intero
@@ -55,13 +56,13 @@ public class Main {
                     productList.removeProduct(productToRemove);
                 }
                 case 3 -> {
-                    ListManager.SortMethods sortCriteria = null;
+                    ProductList.SortMethods sortCriteria = null;
 
                     int sortChoice = ScannerUtil.readSortMethod(scanner);
 
                     switch (sortChoice) {
-                        case 1 -> sortCriteria = ListManager.SortMethods.ALPHABETICAL;
-                        case 2 -> sortCriteria = ListManager.SortMethods.PRICE;
+                        case 1 -> sortCriteria = ProductList.SortMethods.ALPHABETICAL;
+                        case 2 -> sortCriteria = ProductList.SortMethods.PRICE;
                     }
 
                     productList.displayProductList(sortCriteria);
@@ -86,6 +87,11 @@ public class Main {
                     System.out.println("Lista salvata nel file " + fileName);
                 }
                 case 7 -> {
+                    System.out.println("Quale prodotto stai cercando?");
+                    String productToSearch = scanner.nextLine();
+                    productList.findProduct(productToSearch);
+                }
+                case 8 -> {
                     exit = true;
                     System.out.println("Grazie per aver utilizzato il programma. Arrivederci!");
                 }
