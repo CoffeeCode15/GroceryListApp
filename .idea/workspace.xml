@@ -5,20 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0ba9b96b-cfbd-4232-80c3-dff215baf5cd" name="Changes" comment="calcolare statistiche">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test/GroceryListApp/src/ProductListTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GroceryListApp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/GroceryListApp.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GroceryListApp/GroceryListApp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GroceryListApp/GroceryListApp/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GroceryListApp/GroceryListApp/GroceryListApp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GroceryListApp/GroceryListApp/GroceryListApp.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GroceryListApp/GroceryListApp/src/ListManager$SortMethods.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GroceryListApp/GroceryListApp/src/ListManager.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GroceryListApp/GroceryListApp/src/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GroceryListApp/GroceryListApp/src/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GroceryListApp/GroceryListApp/src/ProductSearch.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ListManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ProductList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ProductSearch.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
