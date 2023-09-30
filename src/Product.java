@@ -5,7 +5,7 @@ public class Product {
     private int quantity;
     private float price;
     private boolean completed;
-
+    
     public Product(String name) {
         this.name = name;
         this.completed = false;
@@ -21,27 +21,27 @@ public class Product {
     public void setQuantity(int quantity) {
         this.quantity = quantity;
     }
-
+    
     public void setPrice(float price) {
         this.price = price;
     }
-
+    
     public void setCompleted() {
         completed = true;
     }
-
+    
     public String getName() {
         return name;
     }
-
+    
     public int getQuantity() {
         return quantity;
     }
-
+    
     public float getPrice() {
         return price;
     }
-
+    
     public boolean isCompleted() {
         return completed;
     }
