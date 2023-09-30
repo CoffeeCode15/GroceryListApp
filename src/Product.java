@@ -1,7 +1,7 @@
 package GroceryListApp.src;
 
 public class Product {
-    private String name;
+    private final String name;
     private int quantity;
     private float price;
     private boolean completed;

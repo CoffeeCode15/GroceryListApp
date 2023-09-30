@@ -5,14 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0ba9b96b-cfbd-4232-80c3-dff215baf5cd" name="Changes" comment="calcolare statistiche">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test/GroceryListApp/src/ProductListTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GroceryListApp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/GroceryListApp.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ListManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ProductList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ProductSearch.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ProductList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ProductList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ScannerUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ScannerUtil.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,8 +40,8 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
-                    <option name="branchName" value="Junit_test_implement" />
-                    <option name="lastUsedInstant" value="1696063418" />
+                    <option name="branchName" value="code_improving" />
+                    <option name="lastUsedInstant" value="1696072762" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="main" />
@@ -82,10 +78,11 @@
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers": "true",
-    "git-widget-placeholder": "Junit__test__implement",
+    "git-widget-placeholder": "code__improving",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2"
+    "project.structure.side.proportion": "0.2",
+    "run.code.analysis.last.selected.profile": "pProject Default"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -96,7 +93,7 @@
       <recent name="GroceryListApp.src" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ProductListTest.addProduct">
+  <component name="RunManager" selected="JUnit.ProductListTest.totalCalculationExpanse">
     <configuration name="ProductListTest.addProduct" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="GroceryListApp" />
       <extension name="coverage">
@@ -108,6 +105,38 @@
       <option name="PACKAGE_NAME" value="GroceryListApp.src" />
       <option name="MAIN_CLASS_NAME" value="GroceryListApp.src.ProductListTest" />
       <option name="METHOD_NAME" value="addProduct" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProductListTest.removeProduct" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="GroceryListApp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="GroceryListApp.src.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="GroceryListApp.src" />
+      <option name="MAIN_CLASS_NAME" value="GroceryListApp.src.ProductListTest" />
+      <option name="METHOD_NAME" value="removeProduct" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProductListTest.totalCalculationExpanse" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="GroceryListApp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="GroceryListApp.src.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="GroceryListApp.src" />
+      <option name="MAIN_CLASS_NAME" value="GroceryListApp.src.ProductListTest" />
+      <option name="METHOD_NAME" value="totalCalculationExpanse" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -130,6 +159,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ProductListTest.totalCalculationExpanse" />
+        <item itemvalue="JUnit.ProductListTest.removeProduct" />
         <item itemvalue="JUnit.ProductListTest.addProduct" />
         <item itemvalue="JUnit.ProductSearchTest" />
       </list>

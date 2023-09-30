@@ -7,7 +7,7 @@ public class ScannerUtil {
         String name;
         do {
             while (!scanner.hasNext()) {
-                System.out.println("Inserisci un dato valido per il nome del prodotto.");
+                System.out.println("Inserisci un nome valido");
                 scanner.next();
             }
             name = scanner.nextLine().trim();
@@ -16,35 +16,37 @@ public class ScannerUtil {
     }
     
     public static int readQuantity(Scanner scanner) {
-        int quantity;
-        do {
+        while (true) {
             System.out.println("Quantità da acquistare:");
-            while (!scanner.hasNextInt()) {
+            if (scanner.hasNextInt()) {
+                int quantity = scanner.nextInt();
+                if (quantity > 0) {
+                    return quantity;
+                } else {
+                    System.out.println("Inserisci una quantità maggiore di zero.");
+                }
+            } else {
                 System.out.println("Inserisci un numero valido per la quantità.");
-                scanner.next(); // Consuma l'input type errato per evitare il crush del programma
+                scanner.next(); // Consuma l'input non valido per evitare il blocco
             }
-            quantity = scanner.nextInt(); //Legge la quantità di prodotto da acquistare
-            if (quantity <= 0) {
-                System.out.println("Inserisci una quantità pari almeno a 1");
-            }
-        } while (quantity <= 0);
-        return quantity;
+        }
     }
     
     public static float readPrice(Scanner scanner) {
-        float price;
-        do {
+        while (true) {
             System.out.println("Prezzo stimato:");
-            while (!scanner.hasNextFloat()) {
+            if (scanner.hasNextFloat()) {
+                float price = scanner.nextFloat();
+                if (price > 0) {
+                    return price;
+                } else {
+                    System.out.println("Inserisci un prezzo maggiore di zero.");
+                }
+            } else {
                 System.out.println("Inserisci un numero valido per il prezzo.");
-                scanner.next(); // Consuma l'input type errato per evitare il crush del programma
+                scanner.next(); // Consuma l'input non valido per evitare il blocco
             }
-            price = scanner.nextFloat(); //Legge il prezzo stimato del prodotto
-            if (price <= 0) {
-                System.out.println("Inserisci un prezzo maggiore di 0");
-            }
-        } while (price <= 0);
-        return price;
+        }
     }
     
     public static int readSortMethod(Scanner scanner) {
