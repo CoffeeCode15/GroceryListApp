@@ -5,17 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0ba9b96b-cfbd-4232-80c3-dff215baf5cd" name="Changes" comment="calcolare statistiche">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GroceryListApp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/GroceryListApp.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GroceryListApp/GroceryListApp/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GroceryListApp/GroceryListApp/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GroceryListApp/GroceryListApp/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GroceryListApp/GroceryListApp/GroceryListApp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GroceryListApp/GroceryListApp/GroceryListApp.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GroceryListApp/GroceryListApp/src/ListManager$SortMethods.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GroceryListApp/GroceryListApp/src/ListManager$SortMethods.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GroceryListApp/GroceryListApp/src/ListManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GroceryListApp/GroceryListApp/src/ListManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GroceryListApp/GroceryListApp/src/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GroceryListApp/GroceryListApp/src/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GroceryListApp/GroceryListApp/src/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GroceryListApp/GroceryListApp/src/Product.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GroceryListApp/GroceryListApp/src/ProductUtil.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,25 +30,16 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 3
-}]]></component>
   <component name="ProjectId" id="2VDEmKVSG3r0UiHxxg1VwGbQYGN" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Downloaded.Files.Path.Enabled": "false",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="ProductSearchTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="GroceryListApp" />
