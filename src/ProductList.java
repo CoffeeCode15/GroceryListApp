@@ -129,14 +129,19 @@ public class ProductList {
         }
     }
     
-    public void findProduct (String productName) {
-        for (Product product : productList) {
-            if (Objects.equals(product.getName(), productName)) {
-                System.out.println(product.getName() + ", " + product.getQuantity() + ", " + product.getPrice());
-                return;
-            } else {
-                System.out.println("Prodotto non trovato.");
+    public Product findProduct (String productName) {
+            for (Product product : productList) {
+                if (Objects.equals(product.getName(), productName)) {
+                    return product;
+                }
             }
+            return null;
         }
+    public List<Product> getProductList() {
+        return productList;
     }
+
+
 }
+
+

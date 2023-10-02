@@ -1,0 +1,2 @@
+SELECT *
+FROM `grocery`.`productlist`;
