@@ -4,7 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0ba9b96b-cfbd-4232-80c3-dff215baf5cd" name="Changes" comment="calcolare statistiche" />
+    <list default="true" id="0ba9b96b-cfbd-4232-80c3-dff215baf5cd" name="Changes" comment="calcolare statistiche">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/GroceryListApp/src/ProductListTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/GroceryListApp/src/ProductListTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GroceryListApp/GroceryListApp/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GroceryListApp/GroceryListApp/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GroceryListApp/GroceryListApp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GroceryListApp/GroceryListApp/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GroceryListApp/GroceryListApp/src/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GroceryListApp/GroceryListApp/src/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GroceryListApp/GroceryListApp/src/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GroceryListApp/GroceryListApp/src/Product.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GroceryListApp/GroceryListApp/src/ProductList$SortMethods.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GroceryListApp/GroceryListApp/src/ProductList$SortMethods.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GroceryListApp/GroceryListApp/src/ProductList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GroceryListApp/GroceryListApp/src/ProductList.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GroceryListApp/GroceryListApp/src/ScannerUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GroceryListApp/GroceryListApp/src/ScannerUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/GroceryListApp/GroceryListApp/src/ProductListTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/GroceryListApp/GroceryListApp/src/ProductListTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ProductList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ProductList.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,8 +27,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -87,8 +101,8 @@
       <recent name="GroceryListApp.src" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ProductListTest.totalCalculationExpanse">
-    <configuration name="ProductListTest.addProduct" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.ProductListTest.testSortingByPrice">
+    <configuration name="ProductListTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="GroceryListApp" />
       <extension name="coverage">
         <pattern>
@@ -98,65 +112,82 @@
       </extension>
       <option name="PACKAGE_NAME" value="GroceryListApp.src" />
       <option name="MAIN_CLASS_NAME" value="GroceryListApp.src.ProductListTest" />
-      <option name="METHOD_NAME" value="addProduct" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ProductListTest.removeProduct" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="GroceryListApp" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="GroceryListApp.src.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="GroceryListApp.src" />
-      <option name="MAIN_CLASS_NAME" value="GroceryListApp.src.ProductListTest" />
-      <option name="METHOD_NAME" value="removeProduct" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ProductListTest.totalCalculationExpanse" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="GroceryListApp" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="GroceryListApp.src.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="GroceryListApp.src" />
-      <option name="MAIN_CLASS_NAME" value="GroceryListApp.src.ProductListTest" />
-      <option name="METHOD_NAME" value="totalCalculationExpanse" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ProductSearchTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="GroceryListApp" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="GroceryListApp.src.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="GroceryListApp.src" />
-      <option name="MAIN_CLASS_NAME" value="GroceryListApp.src.ProductSearchTest" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProductListTest.markProductComplete" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="GroceryListApp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="GroceryListApp.src.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="GroceryListApp.src" />
+      <option name="MAIN_CLASS_NAME" value="GroceryListApp.src.ProductListTest" />
+      <option name="METHOD_NAME" value="markProductComplete" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProductListTest.saveAndImportFile" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="GroceryListApp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="GroceryListApp.src.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="GroceryListApp.src" />
+      <option name="MAIN_CLASS_NAME" value="GroceryListApp.src.ProductListTest" />
+      <option name="METHOD_NAME" value="saveAndImportFile" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProductListTest.testSortingAlphabetical" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="GroceryListApp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="GroceryListApp.src.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="GroceryListApp.src" />
+      <option name="MAIN_CLASS_NAME" value="GroceryListApp.src.ProductListTest" />
+      <option name="METHOD_NAME" value="testSortingAlphabetical" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProductListTest.testSortingByPrice" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="GroceryListApp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="GroceryListApp.src.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="GroceryListApp.src" />
+      <option name="MAIN_CLASS_NAME" value="GroceryListApp.src.ProductListTest" />
+      <option name="METHOD_NAME" value="testSortingByPrice" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ProductListTest.totalCalculationExpanse" />
-        <item itemvalue="JUnit.ProductListTest.removeProduct" />
-        <item itemvalue="JUnit.ProductListTest.addProduct" />
-        <item itemvalue="JUnit.ProductSearchTest" />
+        <item itemvalue="JUnit.ProductListTest.testSortingByPrice" />
+        <item itemvalue="JUnit.ProductListTest.testSortingAlphabetical" />
+        <item itemvalue="JUnit.ProductListTest" />
+        <item itemvalue="JUnit.ProductListTest.saveAndImportFile" />
+        <item itemvalue="JUnit.ProductListTest.markProductComplete" />
       </list>
     </recent_temporary>
   </component>
