@@ -1,2 +1,7 @@
-/.idea/
+echo /.idea/
 /List.txt
+workspace.xml
+vcs.xml
+uiDesigner.xml
+modules.xml
+misc.xml
