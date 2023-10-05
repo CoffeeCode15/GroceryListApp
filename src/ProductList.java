@@ -6,6 +6,7 @@ import java.io.PrintWriter;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.*;
+import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Stream;
 
 import static GroceryListApp.src.ProductList.SortMethods.ALPHABETICAL;
@@ -56,36 +57,35 @@ public class ProductList {
     
     
     public void displayProductList(SortMethods sortCriteria) {
-        // Ordina la lista in base al criterio specificato
-        if (sortCriteria.equals(ALPHABETICAL)) {
-            productList.sort(Comparator.comparing(Product::getName));
-        } else if (sortCriteria.equals(PRICE)) {
-            productList.sort(Comparator.comparing(Product::getPrice));
-            // Aggiungi altri criteri di ordinamento se necessario
+        Comparator<Product> comparator = null;
+        // Specifica del metodo di ordinamento
+        if (sortCriteria == SortMethods.ALPHABETICAL) {
+            comparator = Comparator.comparing(Product::getName);
+        } else if (sortCriteria == SortMethods.PRICE) {
+            comparator = Comparator.comparing(Product::getPrice);
         }
         
         if (productList.isEmpty()) {
             System.out.println("La lista è vuota.");
+        } else if (comparator != null) {
+            AtomicInteger i = new AtomicInteger(1); // AtomicInteger serve a inizializzare iteratori da utilizzare in lambda expression come il forEach
+            productList.stream()
+                    .sorted(comparator)
+                    .forEach(product -> {
+                        String isCompleted = (product.isCompleted()) ? "✅" : "";
+                        System.out.println(i.getAndIncrement() + "- " + product.getName() + " x" + product.getQuantity() + " (" +
+                                currencySymbol + product.getPrice() + ")" + isCompleted);
+                    });
         } else {
-            System.out.println("Lista prodotti:");
-            int i = 1;
-            for (Product product : productList) {
-                String isCompleted = (product.isCompleted()) ? "✅" : "";
-                System.out.println(i + "- " + product.getName() + " x" + product.getQuantity() + " (" +
-                        currencySymbol +
-                        product.getPrice() +
-                        ")" + isCompleted);
-                i++;
-            }
+            // Gestione dell'ordinamento non specificato o non valido
+            System.out.println("Criterio di ordinamento non valido.");
         }
     }
     
     public float totalCalculationExpanse() {
-        float totalExpanse = 0;
-        for (Product product : productList) {
-            totalExpanse += product.getQuantity() * product.getPrice();
-        }
-        return totalExpanse;
+        return productList.stream()
+                .map(product -> product.getQuantity() * product.getPrice())
+                .reduce(0f, Float::sum);
     }
     
     public void markProductAsCompleted(String productToComplete) {

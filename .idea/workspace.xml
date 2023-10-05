@@ -6,18 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="0ba9b96b-cfbd-4232-80c3-dff215baf5cd" name="Changes" comment="calcolare statistiche">
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/GroceryListApp/src/ProductListTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/GroceryListApp/src/ProductListTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GroceryListApp/GroceryListApp/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GroceryListApp/GroceryListApp/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GroceryListApp/GroceryListApp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GroceryListApp/GroceryListApp/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GroceryListApp/GroceryListApp/src/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GroceryListApp/GroceryListApp/src/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GroceryListApp/GroceryListApp/src/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GroceryListApp/GroceryListApp/src/Product.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GroceryListApp/GroceryListApp/src/ProductList$SortMethods.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GroceryListApp/GroceryListApp/src/ProductList$SortMethods.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GroceryListApp/GroceryListApp/src/ProductList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GroceryListApp/GroceryListApp/src/ProductList.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GroceryListApp/GroceryListApp/src/ScannerUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GroceryListApp/GroceryListApp/src/ScannerUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/GroceryListApp/GroceryListApp/src/ProductListTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/GroceryListApp/GroceryListApp/src/ProductListTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Product.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ProductList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ProductList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ScannerUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ScannerUtil.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,8 +39,8 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
-                    <option name="branchName" value="Junit_test_implement" />
-                    <option name="lastUsedInstant" value="1696063418" />
+                    <option name="branchName" value="code_fixing" />
+                    <option name="lastUsedInstant" value="1696508760" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="main" />
@@ -87,7 +77,7 @@
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "code__fixing",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2"
