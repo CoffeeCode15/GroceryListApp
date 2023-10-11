@@ -1,4 +1,4 @@
-echo /.idea/
+/.idea/
 /List.txt
 workspace.xml
 vcs.xml
