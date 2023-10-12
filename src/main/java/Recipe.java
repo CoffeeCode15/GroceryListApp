@@ -1,5 +1,3 @@
-package GroceryListApp.src;
-
 import java.util.List;
 
 public class Recipe {

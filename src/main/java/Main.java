@@ -1,5 +1,3 @@
-package GroceryListApp.src;
-
 import java.io.File;
 import java.nio.file.Files;
 import java.util.Scanner;

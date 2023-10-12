@@ -1,5 +1,3 @@
-package GroceryListApp.src;
-
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -8,9 +6,6 @@ import java.nio.file.Paths;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Stream;
-
-import static GroceryListApp.src.ProductList.SortMethods.ALPHABETICAL;
-import static GroceryListApp.src.ProductList.SortMethods.PRICE;
 
 
 public class ProductList {

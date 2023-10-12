@@ -1,5 +1,3 @@
-package GroceryListApp.src;
-
 public class Product {
 
     private String name;
