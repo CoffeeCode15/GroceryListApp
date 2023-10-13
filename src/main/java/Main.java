@@ -1,3 +1,6 @@
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
 import java.io.File;
 import java.nio.file.Files;
 import java.util.Scanner;
@@ -7,6 +10,7 @@ import java.util.Scanner;
  *
  * @author Riccardo Giacalone, Emanuele Conte.
  */
+
 public class Main {
     public static void main(String[] args) {
         ProductList productList = new ProductList(); // Lista dei prodotti del supermercato
