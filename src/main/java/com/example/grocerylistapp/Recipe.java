@@ -1,3 +1,5 @@
+package com.example.grocerylistapp;
+
 import java.util.List;
 
 public class Recipe {
