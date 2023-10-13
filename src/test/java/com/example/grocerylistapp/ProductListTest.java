@@ -1,6 +1,4 @@
-package GroceryListApp.src;
-
-
+package com.example.grocerylistapp;
 
 import org.junit.jupiter.api.Test;
 import java.util.List;

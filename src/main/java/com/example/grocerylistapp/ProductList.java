@@ -1,3 +1,5 @@
+package com.example.grocerylistapp;
+
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -135,8 +137,6 @@ public class ProductList {
     public List<Product> getProductList() {
         return productList;
     }
-
-
 }
 
 
