@@ -71,7 +71,7 @@ public class ProductList {
                     .forEach(product -> {
                         String isCompleted = (product.isCompleted()) ? "✅" : "";
                         System.out.println(i.getAndIncrement() + "- " + product.getName() + " x" + product.getQuantity() + " (" +
-                                currencySymbol + product.getPrice() + ")" + isCompleted);
+                                currencySymbol + product.getPrice() + " " + product.getCategory() + ")" + isCompleted);
                     });
         } else {
             // Gestione dell'ordinamento non specificato o non valido
@@ -118,7 +118,8 @@ public class ProductList {
                 String[] quantitySplit = parts[1].split("x");
                 int quantity = Integer.parseInt(quantitySplit[1]);
                 float price = Float.parseFloat(parts[2].substring(1, parts[2].length() - 1));
-                productList.add(new Product(name, quantity, price));
+                Category category = strinToCategory(parts[3]);
+                productList.add(new Product(name,quantity,price,category));
             });
             System.out.println("Lista importata dal file: " + fileName);
         } catch (IOException e) {
@@ -136,6 +137,16 @@ public class ProductList {
         }
     public List<Product> getProductList() {
         return productList;
+    }
+
+    public void displayProductsByCategory(Category category) {
+        productList.stream()
+                .filter(product -> product.getCategory() == category)
+                .forEach(product -> System.out.println(product.getName()));
+    }
+
+    public Category strinToCategory(String stringa){
+        return Category.fromString(stringa.trim());
     }
 }
 
