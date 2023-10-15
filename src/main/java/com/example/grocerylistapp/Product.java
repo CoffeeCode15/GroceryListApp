@@ -18,31 +18,36 @@ public class Product {
     private float price;
     @Column(nullable = false)
     private boolean completed;
+    @Column(nullable = false)
+    @Enumerated(EnumType.STRING)
+    private Category category;
     
     public Product(String name) {
         this.name = name;
         this.completed = false;
     }
     
-    public Product(String name, int quantity, float price) {
+    public Product(String name, int quantity, float price, Category category) {
         this.name = name;
         this.quantity = quantity;
         this.price = price;
         this.completed = false;
+        this.category = category;
         ;
     }
     
     public Product() {
     }
     
-    public Product(int id, String name, int quantity, float price, boolean completed) {
+    public Product(int id, String name, int quantity, float price, boolean completed, Category category) {
         this.id = id;
         this.name = name;
         this.quantity = quantity;
         this.price = price;
         this.completed = completed;
+        this.category = category;
     }
-    
+
     public void setQuantity(int quantity) {
         this.quantity = quantity;
     }
@@ -85,6 +90,13 @@ public class Product {
     
     public int getId() {
         return id;
+    }
+    public Category getCategory() {
+        return category;
+    }
+
+    public void setCategory(Category category) {
+        this.category = category;
     }
     
     @Override
